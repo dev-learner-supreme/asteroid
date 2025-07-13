@@ -6,6 +6,8 @@ from constants import *
 
 def main():
     pygame.init()
+    clock = pygame.time.Clock()
+    dt = 0
     print("Starting Asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
     print(f"Screen height: {SCREEN_HEIGHT}")
@@ -16,6 +18,7 @@ def main():
                 return
         screen.fill("black")
         pygame.display.flip
+        dt = clock.tick(60) / 1000
 
 
 
